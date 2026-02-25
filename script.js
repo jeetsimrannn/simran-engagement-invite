@@ -7,8 +7,6 @@ const countdownIds = {
   seconds: document.getElementById("seconds"),
 };
 
-const musicToggle = document.getElementById("musicToggle");
-const bgMusic = document.getElementById("bgMusic");
 const inviteIntro = document.getElementById("inviteIntro");
 const envelopeMedia = document.getElementById("envelopeMedia");
 const introVideo = document.getElementById("introVideo");
@@ -33,29 +31,6 @@ function tickCountdown() {
   countdownIds.minutes.textContent = minutes;
   countdownIds.seconds.textContent = seconds;
 }
-
-function updateMusicToggleLabel() {
-  const isMuted = bgMusic.muted;
-  musicToggle.textContent = isMuted ? "🔇" : "🔊";
-  musicToggle.setAttribute("aria-label", isMuted ? "Unmute music" : "Mute music");
-  musicToggle.setAttribute("aria-pressed", String(!isMuted));
-}
-
-async function ensureMusicPlaying() {
-  if (bgMusic.paused) {
-    try {
-      await bgMusic.play();
-    } catch {
-      // Browser may block playback.
-    }
-  }
-}
-
-musicToggle.addEventListener("click", async () => {
-  bgMusic.muted = !bgMusic.muted;
-  await ensureMusicPlaying();
-  updateMusicToggleLabel();
-});
 
 function hideIntro() {
   if (!inviteIntro || inviteIntro.hidden) return;
@@ -120,9 +95,6 @@ if (inviteIntro) {
       }
     }
     introTimeoutId = setTimeout(hideIntro, INTRO_VISIBLE_MS);
-    bgMusic.muted = false;
-    await ensureMusicPlaying();
-    updateMusicToggleLabel();
   });
 
   envelopeMedia?.addEventListener("keydown", (event) => {
@@ -158,8 +130,5 @@ if (introVideo) {
   }, 4500);
 }
 
-bgMusic.muted = false;
-bgMusic.volume = 0.5;
-updateMusicToggleLabel();
 tickCountdown();
 setInterval(tickCountdown, 1000);

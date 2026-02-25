@@ -1,13 +1,13 @@
 :root {
-  --bg: #121212;
-  --bg2: #1a1a1a;
-  --ink: #efe8d8;
-  --muted: #c6b28c;
+  --bg: #fffdf6;
+  --bg2: #f9f1df;
+  --ink: #3a2e1f;
+  --muted: #7c6749;
   --primary: #caa45c;
-  --accent: #e4c987;
-  --card: rgba(23, 23, 23, 0.84);
-  --border: rgba(212, 180, 118, 0.26);
-  --shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+  --accent: #8b6f3a;
+  --card: rgba(255, 250, 238, 0.96);
+  --border: rgba(154, 121, 67, 0.28);
+  --shadow: 0 18px 40px rgba(82, 58, 20, 0.12);
 }
 
 * {
@@ -18,10 +18,10 @@ body {
   margin: 0;
   font-family: "Cormorant Garamond", serif;
   color: var(--ink);
-  background: radial-gradient(circle at 20% 10%, rgba(181, 143, 69, 0.16), transparent 34%),
-    radial-gradient(circle at 90% 0%, rgba(115, 95, 52, 0.18), transparent 28%),
-    linear-gradient(160deg, rgba(18, 18, 18, 0.9), rgba(15, 15, 15, 0.94)),
-    url("bg-charcoal.jpg") center / cover fixed no-repeat;
+  background: radial-gradient(circle at 20% 10%, rgba(204, 167, 95, 0.2), transparent 34%),
+    radial-gradient(circle at 90% 0%, rgba(170, 134, 68, 0.18), transparent 28%),
+    linear-gradient(160deg, rgba(255, 253, 246, 0.9), rgba(247, 239, 222, 0.9)),
+    url("bg-ivory.jpg") center / cover fixed no-repeat;
   min-height: 100vh;
 }
 
@@ -34,8 +34,8 @@ body.intro-active {
   inset: 0;
   display: grid;
   place-items: center;
-  background: linear-gradient(160deg, rgba(18, 18, 18, 0.94), rgba(16, 16, 16, 0.96)),
-    url("bg-charcoal.jpg") center / cover no-repeat;
+  background: linear-gradient(160deg, rgba(255, 253, 246, 0.9), rgba(247, 239, 222, 0.9)),
+    url("bg-ivory.jpg") center / cover no-repeat;
   z-index: 60;
   transition: opacity 0.75s ease, visibility 0.75s ease;
 }
@@ -64,7 +64,7 @@ body.intro-active {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background: #121212;
+  background: #fff9ea;
   cursor: pointer;
   outline: none;
 }
@@ -143,8 +143,8 @@ body.intro-active {
   z-index: 25;
   padding: 10px 12px;
   border-radius: 999px;
-  background: rgba(17, 18, 16, 0.36);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 248, 233, 0.78);
+  border: 1px solid rgba(160, 126, 72, 0.28);
   backdrop-filter: blur(6px);
 }
 
@@ -152,27 +152,8 @@ body.intro-active {
   margin: 0;
   font-weight: 700;
   letter-spacing: 0.02em;
-  color: #f9f2e7;
-  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.5);
-}
-
-.music-fab {
-  position: fixed;
-  right: 18px;
-  bottom: calc(32px + env(safe-area-inset-bottom));
-  width: 58px;
-  height: 58px;
-  border-radius: 999px;
-  border: 1px solid rgba(218, 183, 113, 0.48);
-  background: rgba(22, 22, 22, 0.86);
-  color: var(--accent);
-  font-size: 1.5rem;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-  z-index: 35;
-  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.28);
-  backdrop-filter: blur(5px);
+  color: #6b522b;
+  text-shadow: none;
 }
 
 .container {
@@ -196,7 +177,7 @@ body.intro-active {
 }
 
 .card {
-  background: linear-gradient(180deg, rgba(27, 27, 27, 0.86), rgba(18, 18, 18, 0.82));
+  background: linear-gradient(180deg, rgba(255, 251, 241, 0.96), rgba(248, 241, 226, 0.96));
   border: 1px solid var(--border);
   border-radius: 18px;
   box-shadow: var(--shadow);
@@ -214,8 +195,8 @@ body.intro-active {
   display: grid;
   place-items: center;
   padding: 0;
-  background: linear-gradient(180deg, rgba(23, 23, 23, 0.88), rgba(13, 13, 13, 0.88)),
-    url("bg-charcoal.jpg") center / cover no-repeat;
+  background: linear-gradient(180deg, rgba(255, 252, 245, 0.68), rgba(249, 242, 228, 0.68)),
+    url("bg-ivory.jpg") center / cover no-repeat;
 }
 
 .hero-bg-video,
@@ -233,7 +214,7 @@ body.intro-active {
 }
 
 .hero-overlay {
-  background: linear-gradient(180deg, rgba(12, 12, 12, 0.82) 0%, rgba(16, 16, 16, 0.7) 58%, rgba(10, 10, 10, 0.82) 100%);
+  background: linear-gradient(180deg, rgba(252, 245, 231, 0.68) 0%, rgba(248, 239, 222, 0.48) 58%, rgba(246, 236, 216, 0.68) 100%);
   opacity: 1;
   transition: opacity 1.2s ease;
 }
@@ -243,7 +224,7 @@ body.hero-video-visible .hero-bg-video {
 }
 
 body.hero-video-visible .hero-overlay {
-  opacity: 0.58;
+  opacity: 0.62;
 }
 
 .hero-content {
@@ -258,8 +239,8 @@ body.hero-video-visible .hero-overlay {
 
 .hero-line {
   margin: 0;
-  color: #f2e5ca;
-  text-shadow: 0 2px 22px rgba(0, 0, 0, 0.5);
+  color: #4d3922;
+  text-shadow: 0 2px 14px rgba(255, 255, 255, 0.45);
 }
 
 .hero-content > p:first-child {
@@ -280,7 +261,7 @@ body.hero-video-visible .hero-overlay {
 .hero-request {
   font-size: clamp(1rem, 2.4vw, 1.35rem);
   max-width: 620px;
-  color: #ead8b3;
+  color: #5b4529;
   font-style: italic;
   line-height: 1.45;
 }
@@ -306,11 +287,11 @@ body.intro-complete .reveal-line {
   justify-items: center;
   gap: 1px;
   text-decoration: none;
-  color: #e8d2a0;
+  color: #6a5030;
   text-transform: uppercase;
   letter-spacing: 0.23em;
   font-size: 0.8rem;
-  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.65);
+  text-shadow: none;
   pointer-events: none;
   white-space: nowrap;
 }
@@ -408,7 +389,7 @@ select {
   border-radius: 10px;
   padding: 11px 12px;
   font: inherit;
-  background: rgba(12, 12, 12, 0.75);
+  background: rgba(255, 251, 241, 0.92);
   color: var(--ink);
   font-family: "Cormorant Garamond", serif;
   font-size: 1.06rem;
@@ -430,7 +411,7 @@ select {
 }
 
 .btn-soft {
-  background: rgba(15, 15, 15, 0.58);
+  background: rgba(255, 248, 232, 0.92);
   color: var(--accent);
   border: 1px solid var(--border);
 }
@@ -442,38 +423,38 @@ select {
 }
 
 .countdown div {
-  background: rgba(56, 56, 56, 0.72);
+  background: rgba(255, 247, 231, 0.96);
   border: 0;
   border-radius: 16px;
   padding: 18px 10px;
   text-align: center;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(163, 128, 72, 0.2);
 }
 
 .countdown span {
   display: block;
   font-size: clamp(2rem, 3.8vw, 2.6rem);
   font-weight: 500;
-  color: #f2ead7;
+  color: #5d4324;
 }
 
 .countdown small {
-  color: #e3d4b5;
+  color: #8a6d43;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-size: 0.88rem;
 }
 
 .countdown-card {
-  background: linear-gradient(180deg, rgba(16, 16, 16, 0.6), rgba(16, 16, 16, 0.62)),
-    url("bg-charcoal.jpg") center / cover no-repeat;
-  border-color: rgba(223, 192, 132, 0.35);
+  background: linear-gradient(180deg, rgba(252, 246, 233, 0.94), rgba(245, 235, 214, 0.94)),
+    url("bg-ivory.jpg") center / cover no-repeat;
+  border-color: rgba(176, 139, 80, 0.35);
   text-align: center;
 }
 
 .invite-page .countdown-card {
-  background: linear-gradient(180deg, rgba(10, 10, 10, 0.78), rgba(9, 9, 9, 0.8)),
-    url("bg-charcoal.jpg") center / cover no-repeat;
+  background: linear-gradient(180deg, rgba(253, 247, 236, 0.92), rgba(247, 238, 219, 0.92)),
+    url("bg-ivory.jpg") center / cover no-repeat;
   padding-top: clamp(42px, 8vw, 96px);
   padding-bottom: clamp(42px, 8vw, 96px);
 }
@@ -498,8 +479,8 @@ select {
   width: 100%;
   margin: 0;
   padding: clamp(58px, 8vw, 110px) 20px;
-  background: #41453f;
-  color: #e4c987;
+  background: #f3e8d1;
+  color: #6d5230;
   display: grid;
   justify-items: center;
   gap: 8px;
@@ -511,13 +492,13 @@ select {
   font-size: clamp(1.45rem, 2.5vw, 1.95rem);
   line-height: 0.72;
   transform: translateY(3px);
-  color: #e8d8b0;
+  color: #7f6240;
 }
 
 .invite-footer h3 {
   margin: 0;
   font-size: clamp(1.4rem, 2.6vw, 1.9rem);
-  color: #f1e6cd;
+  color: #6a4f2d;
   font-style: italic;
   font-weight: 600;
 }
@@ -525,18 +506,18 @@ select {
 .invite-footer .footer-date {
   margin: 0;
   font-size: clamp(0.95rem, 1.6vw, 1.2rem);
-  color: #e7d09f;
+  color: #7b5e36;
 }
 
 .invite-footer .footer-credits {
   margin: clamp(18px, 3vw, 28px) 0 0;
   font-size: clamp(0.86rem, 1.2vw, 1rem);
-  color: #dbc38f;
+  color: #84663d;
 }
 
 .invite-footer .footer-credits a {
-  color: #f1ddb0;
-  text-decoration-color: rgba(241, 221, 176, 0.65);
+  color: #765833;
+  text-decoration-color: rgba(118, 88, 51, 0.45);
   text-underline-offset: 4px;
 }
 
@@ -549,13 +530,13 @@ select {
 .countdown-card h2 {
   font-size: clamp(2rem, 3.6vw, 2.5rem);
   margin-bottom: 6px;
-  color: #f4ecdb;
+  color: #5a4225;
 }
 
 .countdown-sub {
   margin: 0 0 18px;
   font-size: clamp(1.2rem, 2.2vw, 1.6rem);
-  color: #ddcfaf;
+  color: #7c6240;
   line-height: 1.2;
 }
 
@@ -568,7 +549,7 @@ select {
 }
 
 .updates-list li {
-  background: rgba(15, 15, 15, 0.62);
+  background: rgba(255, 248, 234, 0.94);
   border: 1px solid var(--border);
   padding: 10px;
   border-radius: 10px;
@@ -610,7 +591,7 @@ iframe {
 .lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(15, 10, 7, 0.85);
+  background: rgba(122, 92, 50, 0.45);
   display: grid;
   place-items: center;
   z-index: 30;
@@ -700,10 +681,6 @@ iframe {
     bottom: 14px;
     letter-spacing: 0.18em;
     font-size: 0.72rem;
-  }
-
-  .music-fab {
-    bottom: calc(40px + env(safe-area-inset-bottom));
   }
 
   .countdown {
