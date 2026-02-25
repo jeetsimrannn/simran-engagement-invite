@@ -6,7 +6,7 @@
     <title>Simranjeet & Simi | Engagement E-Invite</title>
     <meta
       name="description"
-      content="Interactive engagement e-invite with RSVP, live countdown, map, and background music."
+      content="Interactive engagement e-invite with live countdown, map, and background music."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -46,7 +46,7 @@
           </p>
         </div>
         <div class="hero-scroll-cue" aria-hidden="true">
-          <span>confirm your attendance</span>
+          <span>celebrate with us</span>
           <span class="hero-arrow" aria-hidden="true">⌄</span>
         </div>
       </section>
@@ -60,30 +60,6 @@
             <div><span id="hours">0</span><small>Hours</small></div>
             <div><span id="minutes">0</span><small>Minutes</small></div>
             <div><span id="seconds">0</span><small>Seconds</small></div>
-          </div>
-        </article>
-
-        <article class="card" id="rsvpSection">
-          <h2>Confirm Your Attendance</h2>
-          <p class="rsvp-sub">We hope to see you there</p>
-          <div class="rsvp-form-card">
-            <form id="rsvpForm" class="stack" autocomplete="off">
-              <label for="guestName">Guest Name</label>
-              <input id="guestName" name="guestName" type="text" placeholder="Your full name" required />
-
-              <label for="guestCount">Number of Guests</label>
-              <input id="guestCount" name="guestCount" type="number" min="1" max="8" value="1" required />
-
-              <label for="attendance" class="attendance-label">Choose your attendance</label>
-              <select id="attendance" name="attendance" required>
-                <option value="yes">Yes, with pleasure</option>
-                <option value="no">Regretfully no</option>
-                <option value="maybe">Maybe</option>
-              </select>
-
-              <button class="btn" type="submit">Submit RSVP</button>
-              <p id="rsvpThanks" class="muted-text" hidden>Thank you! Your RSVP has been received.</p>
-            </form>
           </div>
         </article>
       </section>
@@ -125,8 +101,6 @@
 
     <button id="musicToggle" class="music-fab" type="button" aria-pressed="false" aria-label="Mute music">🔊</button>
 
-    <script src="supabase-config.js"></script>
-    <script src="backend.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

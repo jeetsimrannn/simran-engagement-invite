@@ -7,8 +7,6 @@ const countdownIds = {
   seconds: document.getElementById("seconds"),
 };
 
-const rsvpForm = document.getElementById("rsvpForm");
-const rsvpThanks = document.getElementById("rsvpThanks");
 const musicToggle = document.getElementById("musicToggle");
 const bgMusic = document.getElementById("bgMusic");
 const inviteIntro = document.getElementById("inviteIntro");
@@ -19,8 +17,6 @@ const INTRO_VISIBLE_MS = 2500;
 const HERO_VIDEO_START_DELAY_MS = 2900;
 let introTimeoutId = null;
 let heroVideoPrimed = false;
-
-const store = window.InviteStore;
 
 function tickCountdown() {
   const target = new Date(EVENT_DATE_ISO).getTime();
@@ -54,37 +50,6 @@ async function ensureMusicPlaying() {
     }
   }
 }
-
-rsvpForm.addEventListener("submit", async (event) => {
-  event.preventDefault();
-
-  const formData = new FormData(rsvpForm);
-  const name = String(formData.get("guestName") || "").trim();
-  const guestCount = Number(formData.get("guestCount"));
-  const attendance = String(formData.get("attendance") || "yes");
-
-  if (!name || Number.isNaN(guestCount) || guestCount < 1) return;
-
-  try {
-    await store.upsertRsvp({
-      name,
-      guestCount,
-      attendance,
-      createdAt: new Date().toISOString(),
-    });
-
-    rsvpForm.reset();
-    document.getElementById("guestCount").value = "1";
-    rsvpThanks.textContent = "Thank you! Your RSVP has been received.";
-    rsvpThanks.hidden = false;
-  } catch {
-    rsvpThanks.textContent = "Could not save RSVP right now. Please try again.";
-    rsvpThanks.style.color = "#9f2318";
-    rsvpThanks.hidden = false;
-    return;
-  }
-  rsvpThanks.style.color = "";
-});
 
 musicToggle.addEventListener("click", async () => {
   bgMusic.muted = !bgMusic.muted;

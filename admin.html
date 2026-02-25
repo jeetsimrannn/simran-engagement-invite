@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Engagement Admin Dashboard</title>
-    <meta name="description" content="Private admin dashboard for engagement invite RSVPs and updates." />
+    <meta name="description" content="Private admin dashboard for engagement invite." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -38,44 +38,15 @@
           <p id="storageMode" class="muted-text"></p>
         </article>
 
-        <section class="grid-two">
-          <article class="card stats-card">
-            <h2>RSVP Tracking</h2>
-            <div class="rsvp-actions">
-              <button id="dedupeRsvp" class="btn btn-soft" type="button">Remove Duplicates</button>
-              <button id="clearRsvp" class="btn btn-soft" type="button">Clear All RSVPs</button>
-            </div>
-            <div class="stats-grid">
-              <div><p id="yesCount">0</p><small>Attending</small></div>
-              <div><p id="noCount">0</p><small>Not Attending</small></div>
-              <div><p id="maybeCount">0</p><small>Maybe</small></div>
-              <div><p id="totalGuests">0</p><small>Total People</small></div>
-            </div>
-            <ul id="rsvpList" class="rsvp-list"></ul>
-          </article>
-
+        <section>
           <article class="card updates-card">
-            <h2>Data Updates</h2>
-            <form id="updateForm" class="stack" autocomplete="off">
-              <label for="updateMessage">Post update for guests</label>
-              <input
-                id="updateMessage"
-                name="updateMessage"
-                type="text"
-                maxlength="120"
-                placeholder="Example: Function starts at 7:00 PM"
-                required
-              />
-              <button class="btn" type="submit">Post Update</button>
-            </form>
-            <ul id="updatesList" class="updates-list"></ul>
+            <h2>Admin Panel</h2>
+            <p class="muted-text">Database features have been removed for this project.</p>
           </article>
         </section>
       </section>
     </main>
 
-    <script src="supabase-config.js"></script>
-    <script src="backend.js"></script>
     <script src="admin.js"></script>
   </body>
 </html>
