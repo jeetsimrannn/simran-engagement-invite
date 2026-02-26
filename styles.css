@@ -218,12 +218,12 @@ body.intro-active {
   background:
     linear-gradient(
       180deg,
-      rgba(52, 36, 18, 0.66) 0%,
-      rgba(77, 56, 28, 0.38) 36%,
-      rgba(74, 54, 28, 0.34) 64%,
-      rgba(47, 32, 16, 0.64) 100%
+      rgba(34, 23, 11, 0.78) 0%,
+      rgba(58, 40, 19, 0.52) 34%,
+      rgba(56, 39, 19, 0.5) 66%,
+      rgba(30, 20, 10, 0.78) 100%
     ),
-    radial-gradient(circle at 50% 46%, rgba(22, 14, 7, 0.18) 0%, rgba(22, 14, 7, 0) 56%);
+    radial-gradient(circle at 50% 46%, rgba(18, 11, 5, 0.36) 0%, rgba(18, 11, 5, 0) 58%);
   opacity: 1;
   transition: opacity 1.2s ease;
 }
@@ -233,7 +233,7 @@ body.hero-video-visible .hero-bg-video {
 }
 
 body.hero-video-visible .hero-overlay {
-  opacity: 0.72;
+  opacity: 0.94;
 }
 
 .hero-content {
@@ -253,8 +253,8 @@ body.hero-video-visible .hero-overlay {
 
 .hero-line {
   margin: 0;
-  color: #2f2315;
-  text-shadow: none;
+  color: #f6ede0;
+  text-shadow: 0 2px 8px rgba(16, 10, 5, 0.55);
 }
 
 .hero-content > p:first-child {
@@ -298,9 +298,14 @@ body.hero-video-visible .hero-overlay {
 .hero-request {
   font-size: clamp(1rem, 2.4vw, 1.35rem);
   max-width: 620px;
-  color: #5b4529;
+  color: #f0e4d2;
   font-style: italic;
   line-height: 1.45;
+}
+
+.hero-kicker,
+.hero-and {
+  color: #efe2ce;
 }
 
 .reveal-line {
@@ -623,7 +628,7 @@ select {
 
 .detail-list p {
   margin: 0;
-  font-size: clamp(0.9rem, 1.2vw, 0.98rem);
+  font-size: clamp(0.88rem, 1.1vw, 0.98rem);
   line-height: 1.5;
   color: #6f645a;
   padding-left: 34px;
@@ -849,7 +854,7 @@ select {
 .our-story-copy {
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  font-size: clamp(0.95rem, 1.5vw, 1.08rem);
+  font-size: clamp(0.88rem, 1.1vw, 0.98rem);
   line-height: 1.45;
   color: #7f746b;
 }
@@ -1119,7 +1124,7 @@ iframe {
   }
 
   .detail-list p {
-    font-size: 1rem;
+    font-size: clamp(0.88rem, 1.1vw, 0.98rem);
     line-height: 1.35;
   }
 
@@ -1169,7 +1174,7 @@ iframe {
   }
 
   .our-story-copy {
-    font-size: clamp(0.95rem, 4vw, 1.08rem);
+    font-size: clamp(0.88rem, 1.1vw, 0.98rem);
   }
 
   .our-story-monogram {
