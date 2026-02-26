@@ -746,7 +746,7 @@ select {
 .blessings-content h2 {
   margin: 0 0 22px;
   color: #c6a75e;
-  font-size: clamp(2.05rem, 3.1vw, 2.9rem);
+  font-size: 2rem;
   font-family: "Cormorant", serif;
   font-style: italic;
   font-weight: 600;
@@ -756,7 +756,7 @@ select {
   margin: 0;
   color: #3e3a36;
   font-family: "Montserrat", sans-serif;
-  font-size: clamp(1.02rem, 1.35vw, 1.18rem);
+  font-size: clamp(0.88rem, 1.1vw, 0.98rem);
   line-height: 1.8;
   font-weight: 400;
 }
@@ -1323,11 +1323,11 @@ iframe {
 
   .blessings-content h2 {
     margin-bottom: 16px;
-    font-size: clamp(1.7rem, 8vw, 2.15rem);
+    font-size: 2rem;
   }
 
   .blessings-content p {
-    font-size: clamp(0.95rem, 4.2vw, 1.03rem);
+    font-size: clamp(0.88rem, 1.1vw, 0.98rem);
   }
 
   .blessings-divider:first-child {
