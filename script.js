@@ -88,6 +88,7 @@ if (inviteIntro) {
     await primeHeroBgVideoFromGesture();
     if (introVideo) {
       introVideo.currentTime = 0;
+      introVideo.playbackRate = 2;
       try {
         await introVideo.play();
       } catch {
@@ -128,6 +129,13 @@ if (introVideo) {
       hideIntro();
     }
   }, 4500);
+}
+
+if (heroBgVideo) {
+  heroBgVideo.addEventListener("ended", () => {
+    // Hold the final frame instead of replaying.
+    heroBgVideo.pause();
+  });
 }
 
 tickCountdown();

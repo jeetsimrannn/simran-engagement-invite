@@ -329,11 +329,11 @@ body.intro-complete .reveal-line {
   justify-items: center;
   gap: 1px;
   text-decoration: none;
-  color: #6a5030;
+  color: #efe2ce;
   text-transform: uppercase;
   letter-spacing: 0.23em;
   font-size: 0.8rem;
-  text-shadow: none;
+  text-shadow: 0 2px 8px rgba(16, 10, 5, 0.52);
   pointer-events: none;
   white-space: nowrap;
 }
@@ -342,6 +342,8 @@ body.intro-complete .reveal-line {
   font-size: 1.8rem;
   line-height: 1;
   animation: arrowBounce 1.2s ease-in-out infinite;
+  color: #f4ead9;
+  text-shadow: 0 2px 8px rgba(16, 10, 5, 0.58);
 }
 
 .muted-text {
