@@ -236,10 +236,10 @@ body.hero-video-visible .hero-overlay {
   max-width: 920px;
   padding: 26px 28px 126px;
   border-radius: 20px;
-  background: rgba(255, 248, 232, 0.86);
-  border: 1px solid rgba(146, 112, 61, 0.35);
-  box-shadow: 0 20px 45px rgba(53, 35, 12, 0.2);
-  backdrop-filter: blur(4px);
+  background: rgba(255, 248, 232, 0.42);
+  border: 1px solid rgba(146, 112, 61, 0.18);
+  box-shadow: 0 14px 28px rgba(53, 35, 12, 0.12);
+  backdrop-filter: blur(2px);
 }
 
 .hero-line {
@@ -556,15 +556,6 @@ select {
   color: #725738;
 }
 
-.details-card {
-  background: linear-gradient(180deg, rgba(252, 244, 225, 0.97), rgba(244, 228, 198, 0.97));
-  color: #2a2118;
-}
-
-.details-card h2 {
-  color: #3d2d18;
-}
-
 .detail-list {
   display: grid;
   gap: 14px;
@@ -587,7 +578,8 @@ select {
 }
 
 .invite-page .map-card h2,
-.invite-page .map-card p {
+.invite-page .map-card p,
+.invite-page .map-card .venue-note {
   color: #241d16;
 }
 
@@ -655,7 +647,7 @@ select {
 }
 
 .countdown-card h2 {
-  font-size: clamp(2rem, 3.6vw, 2.5rem);
+  font-size: clamp(1.55rem, 2.4vw, 1.95rem);
   margin-bottom: 6px;
   color: #5a4225;
 }
@@ -665,14 +657,6 @@ select {
   font-size: clamp(1.2rem, 2.2vw, 1.6rem);
   color: #7c6240;
   line-height: 1.2;
-}
-
-.countdown-meta {
-  margin: 0 0 8px;
-  font-size: clamp(1rem, 1.9vw, 1.25rem);
-  color: #6f5533;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 .countdown-main-datetime {
