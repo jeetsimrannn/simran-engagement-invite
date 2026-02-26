@@ -103,39 +103,81 @@
       <section class="venue-section">
         <h2>Ceremony Details</h2>
         <p class="venue-note">Please join us at the venue below and use the map for easy directions.</p>
-        <div class="venue-card">
-          <div class="detail-list" aria-label="Event details">
-            <p>
-              <svg class="icon icon-map-pin" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
-                <circle cx="12" cy="10" r="3"></circle>
-              </svg>
-              <strong>Venue:</strong><br />The Page Hotel &amp; Banquet
-            </p>
-            <p>
-              <svg class="icon icon-map-pin" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
-                <circle cx="12" cy="10" r="3"></circle>
-              </svg>
-              <strong>Address:</strong><br />Delhi Rd, Opp. Tilyar Lake, Omaxe City, Sector-29, Rohtak, Haryana 124021
-            </p>
-            <p>
-              <svg class="icon icon-map-pin" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
-                <circle cx="12" cy="10" r="3"></circle>
-              </svg>
-              <strong>Meetup Point:</strong><br />Mannat Haveli, Rohtak
-            </p>
+        <div class="ceremony-tabs-card">
+          <div class="ceremony-tabs" role="tablist" aria-label="Ceremony location tabs">
+            <button
+              type="button"
+              class="ceremony-tab is-active"
+              id="tab-main-venue"
+              role="tab"
+              aria-selected="true"
+              aria-controls="panel-main-venue"
+              data-tab-index="0"
+              data-target="main-venue"
+            >
+              Main Venue
+            </button>
+            <button
+              type="button"
+              class="ceremony-tab"
+              id="tab-meetup-point"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-meetup-point"
+              data-tab-index="1"
+              data-target="meetup-point"
+            >
+              Meetup Point
+            </button>
+            <span class="ceremony-tabs-indicator" aria-hidden="true"></span>
           </div>
-          <div class="map-wrap">
-            <iframe
-              title="Venue map"
-              src="https://www.google.com/maps?q=The+Page+Hotel+%26+Banquet+Rohtak&output=embed"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+          <div id="ceremonyPanels" class="ceremony-panels">
+            <article
+              class="ceremony-panel is-active"
+              id="panel-main-venue"
+              role="tabpanel"
+              aria-labelledby="tab-main-venue"
+              data-panel="main-venue"
+            >
+              <h3 class="ceremony-place">The Page Hotel &amp; Banquet</h3>
+              <p class="ceremony-address">Delhi Rd, Opp. Tilyar Lake, Omaxe City, Sector-29, Rohtak, Haryana 124021</p>
+              <div class="ceremony-map-wrap">
+                <iframe
+                  title="Main venue map"
+                  src="https://www.google.com/maps?q=The+Page+Hotel+%26+Banquet+Rohtak&output=embed"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+              <a class="ceremony-action" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=The+Page+Hotel+%26+Banquet+Rohtak">
+                Open in Google Maps
+              </a>
+            </article>
+
+            <article
+              class="ceremony-panel"
+              id="panel-meetup-point"
+              role="tabpanel"
+              aria-labelledby="tab-meetup-point"
+              data-panel="meetup-point"
+              hidden
+            >
+              <h3 class="ceremony-place">Mannat Haveli, Rohtak</h3>
+              <p class="ceremony-time">Meetup Time: 05:30 PM</p>
+              <p class="ceremony-note-copy">Guests will assemble here before proceeding to the venue.</p>
+              <div class="ceremony-map-wrap">
+                <iframe
+                  title="Meetup point map"
+                  src="https://www.google.com/maps?q=Mannat+Haveli+Rohtak&output=embed"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+              <a class="ceremony-action" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=Mannat+Haveli+Rohtak">
+                Navigate to Meetup Location
+              </a>
+            </article>
           </div>
-          <a class="btn map-btn" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=The+Page+Hotel+%26+Banquet+Rohtak">Open in Google Maps</a>
         </div>
       </section>
 
