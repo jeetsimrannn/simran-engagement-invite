@@ -12,7 +12,6 @@ const envelopeMedia = document.getElementById("envelopeMedia");
 const introVideo = document.getElementById("introVideo");
 const heroBgVideo = document.getElementById("heroBgVideo");
 const INTRO_VISIBLE_MS = 2500;
-const HERO_VIDEO_START_DELAY_MS = 2900;
 let introTimeoutId = null;
 let heroVideoPrimed = false;
 
@@ -42,10 +41,9 @@ function hideIntro() {
   }
   inviteIntro.classList.add("is-hidden");
   document.body.classList.remove("intro-active");
+  // Start hero video immediately so video and line-by-line text reveal run together.
+  startHeroBgVideo();
   document.body.classList.add("intro-complete");
-  setTimeout(() => {
-    startHeroBgVideo();
-  }, HERO_VIDEO_START_DELAY_MS);
   setTimeout(() => {
     inviteIntro.hidden = true;
   }, 760);
