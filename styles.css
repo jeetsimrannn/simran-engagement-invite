@@ -254,7 +254,7 @@ body.hero-video-visible .hero-overlay {
 .ik-onkar {
   margin: 4px 0 14px;
   font-family: "Cormorant", serif;
-  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  font-size: clamp(1.45rem, 2.7vw, 2.1rem);
   letter-spacing: 0.14em;
   color: #c6a75e;
   opacity: 0.9;
