@@ -251,15 +251,21 @@ body.hero-video-visible .hero-overlay {
   backdrop-filter: none;
 }
 
-.ik-onkar {
-  margin: 4px 0 14px;
+.hero-ik-onkar {
+  position: absolute;
+  top: clamp(22px, 4.6vh, 48px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  margin: 0;
   font-family: "Cormorant", serif;
   font-size: clamp(1.45rem, 2.7vw, 2.1rem);
   letter-spacing: 0.14em;
-  color: #c6a75e;
-  opacity: 0.9;
+  color: #f6ede0;
+  opacity: 0.95;
   line-height: 1;
   text-align: center;
+  text-shadow: 0 2px 8px rgba(16, 10, 5, 0.58);
   animation: ikOnkarFade 1.5s ease forwards, ikOnkarFloat 8s ease-in-out infinite;
 }
 
@@ -1312,8 +1318,8 @@ iframe {
     width: clamp(44px, 17vw, 72px);
   }
 
-  .ik-onkar {
-    margin: 8px 0 12px;
+  .hero-ik-onkar {
+    top: clamp(16px, 4.2vh, 34px);
     font-size: clamp(1.05rem, 5vw, 1.35rem);
   }
 
