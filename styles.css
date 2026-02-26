@@ -249,6 +249,10 @@ body.hero-video-visible .hero-overlay {
   text-transform: uppercase;
 }
 
+.hero-kicker {
+  max-width: 900px;
+}
+
 .hero-names {
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(2.3rem, 7vw, 5rem);
@@ -256,6 +260,12 @@ body.hero-video-visible .hero-overlay {
   font-weight: 500;
   font-style: italic;
   letter-spacing: 0.01em;
+}
+
+.hero-names span {
+  font-size: 0.76em;
+  font-style: normal;
+  opacity: 0.88;
 }
 
 .hero-request {
@@ -337,7 +347,7 @@ body.intro-complete .reveal-line {
 }
 
 .invite-page .grid-two {
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 0;
   width: 100%;
 }
@@ -459,6 +469,100 @@ select {
   padding-bottom: clamp(42px, 8vw, 96px);
 }
 
+.invitation-card {
+  text-align: center;
+  background:
+    radial-gradient(circle at 10% 14%, rgba(204, 168, 102, 0.22), transparent 34%),
+    radial-gradient(circle at 90% 80%, rgba(189, 145, 77, 0.2), transparent 36%),
+    linear-gradient(180deg, rgba(255, 251, 244, 0.96), rgba(247, 236, 213, 0.96));
+  color: #392a19;
+  position: relative;
+}
+
+.invitation-card::before,
+.invitation-card::after {
+  content: "";
+  position: absolute;
+  left: min(8vw, 70px);
+  right: min(8vw, 70px);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(124, 93, 49, 0.62), transparent);
+}
+
+.invitation-card::before {
+  top: clamp(30px, 4.8vw, 44px);
+}
+
+.invitation-card::after {
+  bottom: clamp(30px, 4.8vw, 44px);
+}
+
+.invite-intro {
+  margin: 0;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: #735936;
+}
+
+.invite-hosts {
+  margin: clamp(16px, 2.6vw, 24px) 0 0;
+  font-size: clamp(1.36rem, 3.2vw, 2.05rem);
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.invite-copy {
+  margin: clamp(16px, 2.8vw, 26px) auto 0;
+  max-width: 800px;
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+  color: #5f4729;
+  font-style: italic;
+}
+
+.invite-couple {
+  margin: clamp(18px, 2.6vw, 28px) 0 0;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.05;
+  color: #302213;
+  font-style: italic;
+}
+
+.invite-couple span {
+  display: block;
+  margin: 8px 0;
+  font-size: clamp(1.06rem, 2vw, 1.32rem);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-style: normal;
+  color: #725738;
+}
+
+.details-card {
+  background: linear-gradient(180deg, rgba(252, 244, 225, 0.97), rgba(244, 228, 198, 0.97));
+  color: #2a2118;
+}
+
+.details-card h2 {
+  color: #3d2d18;
+}
+
+.detail-list {
+  display: grid;
+  gap: 14px;
+}
+
+.detail-list p {
+  margin: 0;
+  font-size: clamp(1.1rem, 2.1vw, 1.45rem);
+  line-height: 1.35;
+}
+
+.detail-list strong {
+  color: #5d4322;
+  font-weight: 700;
+}
+
 .invite-page .map-card {
   background: linear-gradient(180deg, rgba(244, 232, 206, 0.98), rgba(233, 217, 185, 0.98));
   color: #211b15;
@@ -507,6 +611,11 @@ select {
   margin: 0;
   font-size: clamp(0.95rem, 1.6vw, 1.2rem);
   color: #7b5e36;
+}
+
+.invite-footer .footer-hosts {
+  margin: 6px 0 0;
+  font-size: clamp(1.02rem, 1.8vw, 1.26rem);
 }
 
 .invite-footer .footer-credits {
@@ -560,6 +669,28 @@ select {
   overflow: hidden;
   border: 1px solid var(--border);
   margin-bottom: 12px;
+}
+
+.contact-list {
+  margin-top: 16px;
+  display: grid;
+  gap: 8px;
+}
+
+.contact-list p {
+  margin: 0;
+  font-size: clamp(1.02rem, 1.8vw, 1.22rem);
+  color: #3e2f1b;
+}
+
+.contact-list strong {
+  color: #5d4322;
+}
+
+.contact-list a {
+  color: #3f2f17;
+  text-decoration-color: rgba(63, 47, 23, 0.35);
+  text-underline-offset: 3px;
 }
 
 iframe {
@@ -671,6 +802,12 @@ iframe {
   .invite-page .countdown-card {
     padding-top: 44px;
     padding-bottom: 44px;
+  }
+
+  .invitation-card::before,
+  .invitation-card::after {
+    left: 20px;
+    right: 20px;
   }
 
   .hero-content > p:first-child {
