@@ -251,6 +251,18 @@ body.hero-video-visible .hero-overlay {
   backdrop-filter: none;
 }
 
+.ik-onkar {
+  margin: 4px 0 14px;
+  font-family: "Cormorant", serif;
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  letter-spacing: 0.14em;
+  color: #c6a75e;
+  opacity: 0.9;
+  line-height: 1;
+  text-align: center;
+  animation: ikOnkarFade 1.5s ease forwards, ikOnkarFloat 8s ease-in-out infinite;
+}
+
 .hero-line {
   margin: 0;
   color: #f6ede0;
@@ -700,6 +712,93 @@ select {
   gap: 6px;
 }
 
+.blessings-section {
+  width: 100%;
+  margin: 0;
+  padding: clamp(72px, 9vw, 108px) 20px;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(198, 167, 94, 0.08) 0%, rgba(198, 167, 94, 0) 42%),
+    radial-gradient(circle at 88% 80%, rgba(198, 167, 94, 0.06) 0%, rgba(198, 167, 94, 0) 38%),
+    #f5efe6;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.blessings-section::before {
+  content: "☬";
+  position: absolute;
+  left: 50%;
+  top: 52%;
+  transform: translate(-50%, -50%);
+  font-family: "Cormorant", serif;
+  font-size: clamp(8rem, 20vw, 16rem);
+  color: rgba(198, 167, 94, 0.05);
+  filter: blur(1.4px);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.blessings-content {
+  position: relative;
+  z-index: 1;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.blessings-content h2 {
+  margin: 0 0 22px;
+  color: #c6a75e;
+  font-size: clamp(2.05rem, 3.1vw, 2.9rem);
+  font-family: "Cormorant", serif;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.blessings-content p {
+  margin: 0;
+  color: #3e3a36;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.02rem, 1.35vw, 1.18rem);
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+.blessings-content .emphasis {
+  font-style: italic;
+}
+
+.blessings-divider {
+  width: min(920px, 88%);
+  margin: 0 auto;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(198, 167, 94, 0) 0%,
+    rgba(198, 167, 94, 0.6) 50%,
+    rgba(198, 167, 94, 0) 100%
+  );
+}
+
+.blessings-divider:first-child {
+  margin-bottom: clamp(40px, 4.6vw, 56px);
+}
+
+.blessings-divider:last-child {
+  margin-top: clamp(40px, 4.6vw, 56px);
+}
+
+.reveal-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.reveal-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .invite-footer {
   width: 100%;
   margin: 0;
@@ -1045,6 +1144,29 @@ iframe {
   }
 }
 
+@keyframes ikOnkarFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 0.9;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ikOnkarFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
 @media (max-width: 900px) {
   .event-meta,
   .gallery {
@@ -1187,6 +1309,32 @@ iframe {
 
   .our-story-monogram span {
     width: clamp(44px, 17vw, 72px);
+  }
+
+  .ik-onkar {
+    margin: 8px 0 12px;
+    font-size: clamp(1.05rem, 5vw, 1.35rem);
+  }
+
+  .blessings-section {
+    padding: 64px 14px;
+  }
+
+  .blessings-content h2 {
+    margin-bottom: 16px;
+    font-size: clamp(1.7rem, 8vw, 2.15rem);
+  }
+
+  .blessings-content p {
+    font-size: clamp(0.95rem, 4.2vw, 1.03rem);
+  }
+
+  .blessings-divider:first-child {
+    margin-bottom: 28px;
+  }
+
+  .blessings-divider:last-child {
+    margin-top: 28px;
   }
 
   iframe {
