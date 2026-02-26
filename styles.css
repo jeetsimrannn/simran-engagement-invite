@@ -710,6 +710,17 @@ select {
   margin: 0;
   color: #756b63;
   font-size: clamp(0.83rem, 1.05vw, 0.94rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.queries-strip .query-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .queries-strip a {
@@ -1276,6 +1287,9 @@ iframe {
 
   .queries-strip p {
     line-height: 1.7;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
   }
 
   .countdown-main-datetime {
