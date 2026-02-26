@@ -360,12 +360,12 @@ body.intro-complete .reveal-line {
 
 .grid-two {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 18px;
 }
 
 .invite-page .grid-two {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 0;
   width: 100%;
 }
@@ -667,6 +667,14 @@ select {
   line-height: 1.2;
 }
 
+.countdown-meta {
+  margin: 0 0 8px;
+  font-size: clamp(1rem, 1.9vw, 1.25rem);
+  color: #6f5533;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .updates-list {
   margin: 12px 0 0;
   padding: 0;
@@ -802,15 +810,9 @@ iframe {
 }
 
 @media (max-width: 900px) {
-  .grid-two,
   .event-meta,
   .gallery {
     grid-template-columns: 1fr;
-  }
-
-  .invite-page .grid-two {
-    grid-template-columns: 1fr;
-    gap: 0;
   }
 
   .topbar {
