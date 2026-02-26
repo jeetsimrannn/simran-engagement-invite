@@ -817,7 +817,7 @@ select {
 .invite-footer {
   width: 100%;
   margin: 0;
-  padding: clamp(100px, 11vw, 120px) 20px clamp(58px, 8vw, 110px);
+  padding: clamp(100px, 11vw, 120px) 20px;
   background: #ede3d2;
   color: #6b6158;
   display: flex;
