@@ -808,6 +808,11 @@ iframe {
     grid-template-columns: 1fr;
   }
 
+  .invite-page .grid-two {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
   .topbar {
     margin-top: 12px;
     top: 6px;
@@ -829,12 +834,43 @@ iframe {
   }
 
   .hero-content > p:first-child {
-    letter-spacing: 0.3em;
+    letter-spacing: 0.16em;
+  }
+
+  .hero-content {
+    width: calc(100% - 28px);
+    max-width: none;
+    gap: 10px;
+    padding: 18px 14px 82px;
+    border-radius: 14px;
+  }
+
+  .hero-kicker {
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+  }
+
+  .hero-parents {
+    font-size: clamp(1.06rem, 5.5vw, 1.38rem);
+  }
+
+  .hero-request {
+    font-size: clamp(0.95rem, 4.5vw, 1.12rem);
+    line-height: 1.3;
+  }
+
+  .hero-names {
+    font-size: clamp(1.7rem, 9vw, 2.4rem);
+  }
+
+  .hero-and {
+    font-size: 0.92rem;
+    letter-spacing: 0.1em;
   }
 
   .hero-scroll-cue {
     bottom: 14px;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.11em;
     font-size: 0.72rem;
   }
 
@@ -849,6 +885,16 @@ iframe {
   .countdown small {
     font-size: 0.8rem;
     letter-spacing: 0.12em;
+  }
+
+  .detail-list p,
+  .contact-list p {
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+
+  iframe {
+    min-height: 240px;
   }
 
 }
