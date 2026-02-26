@@ -731,6 +731,25 @@ select {
   letter-spacing: 0.01em;
 }
 
+.ceremony-meta-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.ceremony-icon {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  margin-top: 2px;
+  color: #b08e66;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .ceremony-map-wrap {
   border-radius: 14px;
   overflow: hidden;
@@ -752,9 +771,9 @@ select {
   justify-content: center;
   min-width: 228px;
   border-radius: 10px;
-  border: 1px solid #1e1e1e;
+  border: 1px solid #5a4428;
   color: #fff;
-  background: #1e1e1e;
+  background: #5a4428;
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   font-size: 0.88rem;
@@ -764,8 +783,8 @@ select {
 }
 
 .ceremony-action:hover {
-  background: #2b2b2b;
-  border-color: #2b2b2b;
+  background: #6b5232;
+  border-color: #6b5232;
   color: #fff;
 }
 
