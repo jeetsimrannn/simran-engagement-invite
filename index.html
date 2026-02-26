@@ -53,7 +53,7 @@
         </div>
       </section>
 
-      <section class="card countdown-card">
+      <section class="card countdown-card reveal-on-scroll from-up" data-parallax="0.06">
         <p class="countdown-main-datetime">
           <svg class="icon icon-calendar" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M8 2v4"></path>
@@ -66,10 +66,10 @@
         <h2>Live Countdown</h2>
           <p class="countdown-sub">To the most special day of our lives</p>
           <div id="countdown" class="countdown" role="timer" aria-live="polite">
-            <div><span id="days">0</span><small>Days</small></div>
-            <div><span id="hours">0</span><small>Hours</small></div>
-            <div><span id="minutes">0</span><small>Minutes</small></div>
-            <div><span id="seconds">0</span><small>Seconds</small></div>
+            <div class="reveal-on-scroll from-up" style="--reveal-delay: 0ms"><span id="days">0</span><small>Days</small></div>
+            <div class="reveal-on-scroll from-up" style="--reveal-delay: 100ms"><span id="hours">0</span><small>Hours</small></div>
+            <div class="reveal-on-scroll from-up" style="--reveal-delay: 200ms"><span id="minutes">0</span><small>Minutes</small></div>
+            <div class="reveal-on-scroll from-up is-seconds" style="--reveal-delay: 300ms"><span id="seconds">0</span><small>Seconds</small></div>
           </div>
       </section>
 
@@ -83,12 +83,12 @@
         <span></span>
       </section>
 
-      <section class="our-story-section" aria-label="Our story">
+      <section class="our-story-section reveal-on-scroll from-up" aria-label="Our story" data-parallax="0.05">
         <div class="our-story-card">
-          <figure class="our-story-photo-wrap">
+          <figure class="our-story-photo-wrap reveal-on-scroll from-left">
             <img src="our-story.jpeg" alt="Simranjeet and Simran together" class="our-story-photo" />
           </figure>
-          <div class="our-story-content">
+          <div class="our-story-content reveal-on-scroll from-right">
             <h2>Our Story</h2>
             <p class="our-story-copy">
               Our journey began with a simple hello...
@@ -100,11 +100,11 @@
         </div>
       </section>
 
-      <section class="venue-section">
+      <section class="venue-section reveal-on-scroll from-up" data-parallax="0.05">
         <h2>Ceremony Details</h2>
         <p class="venue-note">Please join us at the venue below and use the map for easy directions.</p>
         <div class="ceremony-tabs-card">
-          <div class="ceremony-tabs" role="tablist" aria-label="Ceremony location tabs">
+          <div class="ceremony-tabs reveal-on-scroll from-up" style="--reveal-delay: 80ms" role="tablist" aria-label="Ceremony location tabs">
             <button
               type="button"
               class="ceremony-tab is-active"
@@ -231,11 +231,11 @@
         </p>
       </section>
 
-      <section class="blessings-section reveal-up" aria-label="Seeking your blessings">
+      <section class="blessings-section reveal-on-scroll from-up" aria-label="Seeking your blessings" data-parallax="0.07">
         <div class="blessings-divider" aria-hidden="true"></div>
         <div class="blessings-content">
-          <h2>Seeking Your Blessings</h2>
-          <p>
+          <h2 class="reveal-on-scroll from-up">Seeking Your Blessings</h2>
+          <p class="reveal-on-scroll from-up" style="--reveal-delay: 200ms">
             With <span class="emphasis">Waheguru's grace</span>
             <br />
             and
@@ -248,7 +248,7 @@
         <div class="blessings-divider" aria-hidden="true"></div>
       </section>
 
-      <footer class="invite-footer" aria-label="Footer">
+      <footer class="invite-footer reveal-on-scroll fade-only" aria-label="Footer">
         <p class="footer-icon" aria-hidden="true">
           <svg class="icon icon-heart icon-heart-outline" viewBox="0 0 24 24">
             <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>

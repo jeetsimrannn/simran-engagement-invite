@@ -496,6 +496,10 @@ select {
   box-shadow: 0 4px 12px rgba(73, 61, 49, 0.12);
 }
 
+.countdown div.is-seconds {
+  animation: secondsGlow 2.8s ease-in-out infinite;
+}
+
 .countdown span {
   display: block;
   font-size: clamp(2rem, 3.8vw, 2.6rem);
@@ -516,12 +520,31 @@ select {
   background: #f5f1e9;
   border-color: transparent;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .invite-page .countdown-card {
   background: #f5f1e9;
   padding-top: clamp(40px, 8vw, 86px);
   padding-bottom: clamp(28px, 6vw, 56px);
+}
+
+.countdown-card::before {
+  content: "";
+  position: absolute;
+  inset: -16% -8%;
+  background:
+    radial-gradient(circle at 14% 22%, rgba(198, 167, 94, 0.1), transparent 44%),
+    radial-gradient(circle at 84% 78%, rgba(198, 167, 94, 0.08), transparent 42%);
+  transform: translate3d(0, var(--parallax-shift, 0px), 0);
+  will-change: transform;
+  pointer-events: none;
+}
+
+.countdown-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .invitation-card {
@@ -642,6 +665,23 @@ select {
   box-shadow: 0 10px 24px rgba(56, 44, 27, 0.07);
   padding: clamp(18px, 2.8vw, 28px);
   text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.ceremony-tabs-card::before {
+  content: "";
+  position: absolute;
+  inset: -14%;
+  background: radial-gradient(circle at 16% 80%, rgba(198, 167, 94, 0.07), transparent 44%);
+  transform: translate3d(0, var(--parallax-shift, 0px), 0);
+  will-change: transform;
+  pointer-events: none;
+}
+
+.ceremony-tabs-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .ceremony-tabs {
@@ -846,7 +886,7 @@ select {
   position: absolute;
   left: 50%;
   top: 52%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, calc(-50% + var(--parallax-shift, 0px)));
   font-family: "Cormorant", serif;
   font-size: clamp(8rem, 20vw, 16rem);
   color: rgba(198, 167, 94, 0.05);
@@ -855,9 +895,21 @@ select {
   pointer-events: none;
 }
 
+.blessings-section::after {
+  content: "";
+  position: absolute;
+  inset: -8%;
+  background:
+    radial-gradient(circle at 12% 16%, rgba(198, 167, 94, 0.1), transparent 42%),
+    radial-gradient(circle at 88% 84%, rgba(198, 167, 94, 0.09), transparent 42%);
+  transform: translate3d(0, var(--parallax-shift, 0px), 0);
+  will-change: transform;
+  pointer-events: none;
+}
+
 .blessings-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   max-width: 920px;
   margin: 0 auto;
 }
@@ -904,15 +956,40 @@ select {
   margin-top: clamp(40px, 4.6vw, 56px);
 }
 
-.reveal-up {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.9s ease, transform 0.9s ease;
+.reveal-on-scroll {
+  opacity: 1;
+  transform: none;
 }
 
-.reveal-up.is-visible {
+body.motion-enabled .reveal-on-scroll {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+  transition:
+    opacity 760ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 760ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+body.motion-enabled .reveal-on-scroll.from-left {
+  transform: translate3d(-20px, 0, 0);
+}
+
+body.motion-enabled .reveal-on-scroll.from-right {
+  transform: translate3d(20px, 0, 0);
+}
+
+body.motion-enabled .reveal-on-scroll.from-up {
+  transform: translate3d(0, 24px, 0);
+}
+
+body.motion-enabled .reveal-on-scroll.fade-only {
+  transform: none;
+}
+
+body.motion-enabled .reveal-on-scroll.is-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
 }
 
 .invite-footer {
@@ -1032,6 +1109,23 @@ select {
     radial-gradient(circle at 92% 88%, rgba(255, 255, 255, 0.4) 0, transparent 40%),
     linear-gradient(180deg, rgba(246, 238, 228, 0.95), rgba(241, 232, 219, 0.95));
   box-shadow: 0 10px 24px rgba(76, 60, 42, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.our-story-card::before {
+  content: "";
+  position: absolute;
+  inset: -12%;
+  background: radial-gradient(circle at 78% 22%, rgba(198, 167, 94, 0.09), transparent 46%);
+  transform: translate3d(0, var(--parallax-shift, 0px), 0);
+  will-change: transform;
+  pointer-events: none;
+}
+
+.our-story-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .our-story-photo-wrap {
@@ -1262,6 +1356,17 @@ iframe {
 
   to {
     opacity: 1;
+  }
+}
+
+@keyframes secondsGlow {
+  0%,
+  100% {
+    box-shadow: 0 4px 12px rgba(73, 61, 49, 0.12);
+  }
+
+  50% {
+    box-shadow: 0 6px 16px rgba(183, 145, 84, 0.22);
   }
 }
 
