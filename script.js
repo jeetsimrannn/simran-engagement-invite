@@ -1,3 +1,12 @@
+const EVENT_DATE_ISO = "2026-03-14T18:30:00";
+
+const countdownIds = {
+  days: document.getElementById("days"),
+  hours: document.getElementById("hours"),
+  minutes: document.getElementById("minutes"),
+  seconds: document.getElementById("seconds"),
+};
+
 const inviteIntro = document.getElementById("inviteIntro");
 const envelopeMedia = document.getElementById("envelopeMedia");
 const introVideo = document.getElementById("introVideo");
@@ -6,6 +15,24 @@ const INTRO_VISIBLE_MS = 2500;
 const HERO_VIDEO_START_DELAY_MS = 2900;
 let introTimeoutId = null;
 let heroVideoPrimed = false;
+
+function tickCountdown() {
+  if (!countdownIds.days || !countdownIds.hours || !countdownIds.minutes || !countdownIds.seconds) return;
+
+  const target = new Date(EVENT_DATE_ISO).getTime();
+  const now = Date.now();
+  const diff = Math.max(0, target - now);
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((diff / (1000 * 60)) % 60);
+  const seconds = Math.floor((diff / 1000) % 60);
+
+  countdownIds.days.textContent = days;
+  countdownIds.hours.textContent = hours;
+  countdownIds.minutes.textContent = minutes;
+  countdownIds.seconds.textContent = seconds;
+}
 
 function hideIntro() {
   if (!inviteIntro || inviteIntro.hidden) return;
@@ -104,3 +131,6 @@ if (introVideo) {
     }
   }, 4500);
 }
+
+tickCountdown();
+setInterval(tickCountdown, 1000);

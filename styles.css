@@ -214,7 +214,7 @@ body.intro-active {
 }
 
 .hero-overlay {
-  background: linear-gradient(180deg, rgba(252, 245, 231, 0.68) 0%, rgba(248, 239, 222, 0.48) 58%, rgba(246, 236, 216, 0.68) 100%);
+  background: linear-gradient(180deg, rgba(68, 49, 23, 0.52) 0%, rgba(98, 71, 34, 0.36) 58%, rgba(62, 45, 22, 0.5) 100%);
   opacity: 1;
   transition: opacity 1.2s ease;
 }
@@ -224,23 +224,28 @@ body.hero-video-visible .hero-bg-video {
 }
 
 body.hero-video-visible .hero-overlay {
-  opacity: 0.62;
+  opacity: 0.72;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
   display: grid;
-  gap: 22px;
+  gap: 14px;
   text-align: center;
-  max-width: 780px;
-  padding: 0 24px 116px;
+  max-width: 920px;
+  padding: 26px 28px 126px;
+  border-radius: 20px;
+  background: rgba(255, 248, 232, 0.86);
+  border: 1px solid rgba(146, 112, 61, 0.35);
+  box-shadow: 0 20px 45px rgba(53, 35, 12, 0.2);
+  backdrop-filter: blur(4px);
 }
 
 .hero-line {
   margin: 0;
-  color: #4d3922;
-  text-shadow: 0 2px 14px rgba(255, 255, 255, 0.45);
+  color: #2f2315;
+  text-shadow: none;
 }
 
 .hero-content > p:first-child {
@@ -251,6 +256,19 @@ body.hero-video-visible .hero-overlay {
 
 .hero-kicker {
   max-width: 900px;
+  font-size: clamp(0.92rem, 1.5vw, 1.1rem);
+  letter-spacing: 0.26em;
+}
+
+.hero-parents {
+  font-size: clamp(1.4rem, 3vw, 2.1rem);
+  font-weight: 600;
+}
+
+.hero-and {
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  letter-spacing: 0.2em;
+  font-weight: 700;
 }
 
 .hero-names {
