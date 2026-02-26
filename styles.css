@@ -715,11 +715,8 @@ select {
 .blessings-section {
   width: 100%;
   margin: 0;
-  padding: clamp(72px, 9vw, 108px) 20px;
-  background:
-    radial-gradient(circle at 12% 18%, rgba(198, 167, 94, 0.08) 0%, rgba(198, 167, 94, 0) 42%),
-    radial-gradient(circle at 88% 80%, rgba(198, 167, 94, 0.06) 0%, rgba(198, 167, 94, 0) 38%),
-    #f5efe6;
+  padding: clamp(72px, 8vw, 92px) 20px clamp(100px, 11vw, 120px);
+  background: #f5efe6;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -802,8 +799,8 @@ select {
 .invite-footer {
   width: 100%;
   margin: 0;
-  padding: clamp(58px, 8vw, 110px) 20px;
-  background: #f5f1e9;
+  padding: clamp(100px, 11vw, 120px) 20px clamp(58px, 8vw, 110px);
+  background: #ede3d2;
   color: #6b6158;
   display: grid;
   justify-items: center;
@@ -823,6 +820,7 @@ select {
   margin: 0;
   font-size: clamp(1.4rem, 2.6vw, 1.9rem);
   color: #554b42;
+  opacity: 0.9;
   font-style: italic;
   font-weight: 600;
   font-family: "Cormorant", serif;
@@ -832,17 +830,20 @@ select {
   margin: 0;
   font-size: clamp(0.88rem, 1.2vw, 1rem);
   color: #7f746b;
+  opacity: 0.9;
 }
 
 .invite-footer .footer-hosts {
   margin: 6px 0 0;
   font-size: clamp(0.92rem, 1.15vw, 1.02rem);
+  opacity: 0.9;
 }
 
 .invite-footer .footer-credits {
   margin: clamp(18px, 3vw, 28px) 0 0;
   font-size: clamp(0.78rem, 1vw, 0.88rem);
   color: #8c8175;
+  opacity: 0.9;
 }
 
 .invite-footer .footer-credits a {
