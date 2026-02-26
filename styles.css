@@ -215,7 +215,15 @@ body.intro-active {
 }
 
 .hero-overlay {
-  background: linear-gradient(180deg, rgba(68, 49, 23, 0.52) 0%, rgba(98, 71, 34, 0.36) 58%, rgba(62, 45, 22, 0.5) 100%);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(52, 36, 18, 0.66) 0%,
+      rgba(77, 56, 28, 0.38) 36%,
+      rgba(74, 54, 28, 0.34) 64%,
+      rgba(47, 32, 16, 0.64) 100%
+    ),
+    radial-gradient(circle at 50% 46%, rgba(22, 14, 7, 0.18) 0%, rgba(22, 14, 7, 0) 56%);
   opacity: 1;
   transition: opacity 1.2s ease;
 }
@@ -236,11 +244,11 @@ body.hero-video-visible .hero-overlay {
   text-align: center;
   max-width: 920px;
   padding: 26px 28px 126px;
-  border-radius: 20px;
-  background: rgba(255, 248, 232, 0.42);
-  border: 1px solid rgba(146, 112, 61, 0.18);
-  box-shadow: 0 14px 28px rgba(53, 35, 12, 0.12);
-  backdrop-filter: blur(2px);
+  border-radius: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  backdrop-filter: none;
 }
 
 .hero-line {
