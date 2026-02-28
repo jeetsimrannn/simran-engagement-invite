@@ -49,6 +49,10 @@ function hideIntro() {
   document.body.classList.add("intro-complete");
   setTimeout(() => {
     inviteIntro.hidden = true;
+    if (audioToggle && audioStarted) {
+      audioToggle.hidden = false;
+      setAudioToggleState(bgAudio ? bgAudio.muted : false);
+    }
   }, 760);
 }
 
@@ -96,10 +100,7 @@ async function startBgAudioFromGesture() {
   try {
     await bgAudio.play();
     audioStarted = true;
-    if (audioToggle) {
-      audioToggle.hidden = false;
-      setAudioToggleState(false);
-    }
+    setAudioToggleState(false);
   } catch {
     // Ignore playback blocks; user can retry by tapping the envelope again.
   }
