@@ -145,6 +145,10 @@ body.intro-active {
   backdrop-filter: blur(6px);
 }
 
+.audio-toggle[hidden] {
+  display: none !important;
+}
+
 .audio-toggle:hover {
   background: rgba(53, 39, 20, 0.66);
   border-color: rgba(245, 232, 210, 0.8);
