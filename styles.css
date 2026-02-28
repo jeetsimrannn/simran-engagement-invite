@@ -127,6 +127,56 @@ body.intro-active {
   display: none;
 }
 
+.audio-toggle {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 80;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(245, 232, 210, 0.65);
+  border-radius: 999px;
+  background: rgba(34, 24, 11, 0.52);
+  color: #f5e8d2;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background-color 0.28s ease, border-color 0.28s ease, color 0.28s ease;
+  backdrop-filter: blur(6px);
+}
+
+.audio-toggle:hover {
+  background: rgba(53, 39, 20, 0.66);
+  border-color: rgba(245, 232, 210, 0.8);
+}
+
+.audio-toggle .audio-icon {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.audio-toggle .audio-icon-off {
+  display: none;
+}
+
+.audio-toggle.is-muted {
+  color: #ead9bb;
+  border-color: rgba(234, 217, 187, 0.5);
+}
+
+.audio-toggle.is-muted .audio-icon-on {
+  display: none;
+}
+
+.audio-toggle.is-muted .audio-icon-off {
+  display: block;
+}
+
 .topbar,
 .container {
   position: relative;
@@ -1469,6 +1519,13 @@ iframe {
     bottom: 14px;
     letter-spacing: 0.11em;
     font-size: 0.72rem;
+  }
+
+  .audio-toggle {
+    top: 12px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
   }
 
   .countdown {

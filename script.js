@@ -11,9 +11,12 @@ const inviteIntro = document.getElementById("inviteIntro");
 const envelopeMedia = document.getElementById("envelopeMedia");
 const introVideo = document.getElementById("introVideo");
 const heroBgVideo = document.getElementById("heroBgVideo");
+const bgAudio = document.getElementById("bgAudio");
+const audioToggle = document.getElementById("audioToggle");
 const INTRO_VISIBLE_MS = 2500;
 let introTimeoutId = null;
 let heroVideoPrimed = false;
+let audioStarted = false;
 
 function tickCountdown() {
   if (!countdownIds.days || !countdownIds.hours || !countdownIds.minutes || !countdownIds.seconds) return;
@@ -79,6 +82,29 @@ async function primeHeroBgVideoFromGesture() {
   }
 }
 
+function setAudioToggleState(isMuted) {
+  if (!audioToggle) return;
+  audioToggle.classList.toggle("is-muted", isMuted);
+  audioToggle.setAttribute("aria-pressed", isMuted ? "true" : "false");
+  audioToggle.setAttribute("aria-label", isMuted ? "Unmute music" : "Mute music");
+}
+
+async function startBgAudioFromGesture() {
+  if (!bgAudio || audioStarted) return;
+  bgAudio.muted = false;
+  bgAudio.volume = 0.55;
+  try {
+    await bgAudio.play();
+    audioStarted = true;
+    if (audioToggle) {
+      audioToggle.hidden = false;
+      setAudioToggleState(false);
+    }
+  } catch {
+    // Ignore playback blocks; user can retry by tapping the envelope again.
+  }
+}
+
 if (inviteIntro) {
   document.body.classList.remove("intro-complete");
   document.body.classList.add("intro-active");
@@ -86,6 +112,7 @@ if (inviteIntro) {
     if (inviteIntro.classList.contains("is-opening")) return;
     inviteIntro.classList.add("is-opening");
     await primeHeroBgVideoFromGesture();
+    await startBgAudioFromGesture();
     if (introVideo) {
       introVideo.currentTime = 0;
       introVideo.playbackRate = 2;
@@ -103,6 +130,14 @@ if (inviteIntro) {
       event.preventDefault();
       envelopeMedia.click();
     }
+  });
+}
+
+if (audioToggle) {
+  audioToggle.addEventListener("click", () => {
+    if (!bgAudio || !audioStarted) return;
+    bgAudio.muted = !bgAudio.muted;
+    setAudioToggleState(bgAudio.muted);
   });
 }
 

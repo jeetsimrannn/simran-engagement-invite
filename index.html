@@ -17,6 +17,21 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="invite-page">
+    <audio id="bgAudio" preload="auto" loop>
+      <source src="bg-audio.mp3" type="audio/mpeg" />
+    </audio>
+    <button id="audioToggle" class="audio-toggle" type="button" aria-label="Mute music" aria-pressed="false" hidden>
+      <svg class="audio-icon audio-icon-on" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M11 5 6 9H3v6h3l5 4V5Z"></path>
+        <path d="M15.5 8.5a5 5 0 0 1 0 7"></path>
+        <path d="M18.5 6a8.5 8.5 0 0 1 0 12"></path>
+      </svg>
+      <svg class="audio-icon audio-icon-off" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M11 5 6 9H3v6h3l5 4V5Z"></path>
+        <path d="m16 8 5 8"></path>
+        <path d="m21 8-5 8"></path>
+      </svg>
+    </button>
     <div id="inviteIntro" class="intro-overlay" role="dialog" aria-label="Invitation envelope">
       <div class="intro-panel">
         <div id="envelopeMedia" class="envelope-media" role="button" tabindex="0" aria-label="Open invitation">
